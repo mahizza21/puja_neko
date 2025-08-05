@@ -45,7 +45,7 @@ document.querySelector("#verif").addEventListener("submit", (e) => {
   } else {
     alert("Password salah!");
     nsfwVerified = false;
-    document.querySelector("#btnradiosfw1").checked = true;
+    document.querySelector("#btnradiosfw2").checked = true;
   }
 });
 
@@ -74,3 +74,4 @@ async function coba() {
     console.log(`ini error = ${error}`);
   }
 }
+
