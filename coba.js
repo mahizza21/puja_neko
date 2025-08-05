@@ -11,7 +11,7 @@ async function coba() {
         <div class="card mx-auto mx-sm-0" style="width: 18rem">
           <img src="${data.url}" class="card-img-top" alt="..." id="gambar1" />
           <div class="card-body">
-            <h5 class="Kesayanganmu">Card title</h5>
+            <h5 class="card-title">Kesayanganmu</h5>
             <p class="card-text">
               Some quick example text to build on the card title and make up the
               bulk of the card’s content.
