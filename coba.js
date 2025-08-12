@@ -23,7 +23,7 @@ document.querySelector("#verif").addEventListener("submit", (e) => {
   if (pass == correctPass) {
     nfswVerif = true;
     // Tutup modal (dengan Bootstrap JS)
-    alert("Password benar. Silakan klik tombol 'Tampilkan Gambar' lagi.");
+    alert("Password benar!");
     document.querySelector("#btnradiosfw1").checked = false;
     const modal = bootstrap.Modal.getInstance(
       document.getElementById("staticBackdrop")
@@ -74,4 +74,3 @@ async function coba() {
     console.log(`ini error = ${error}`);
   }
 }
-
