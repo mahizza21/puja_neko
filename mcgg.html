@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MCGG</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
+</head>
+<style>
+    .match-box {
+        flex: 1; /* semua kotak di dalam kol sama tinggi */
+        min-height: 100px; /* tinggi minimum tiap baris */
+    }
+</style>
+<body>
+    <nav class="navbar bg-primary navbar-expand-lg" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Irham</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Waifu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ucapan.html">Ucapan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sepakbola.html">SepakBola</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="mcgg.html">MCGG</a>
+                    </li>
+                    -
+                </ul>
+            </div>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                <button class="btn btn-outline-light" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="font-bold text-center">TEBAK MUSUH BERIKUTNYA</h1>
+
+        <div class="container">
+            <form action="">
+                <div class="row" style="height: 700px;">
+                    <div class="col d-flex flex-column">
+                        <h2 class=" text-center">Kamu</h2>
+                        <!-- Round I-2 -->
+                        <div class="border p-2 match-box ">
+                            <div class=" fw-bold my-auto text-center text-primary ">Round
+                                I-2</div>
+                            <div class="row px-2">
+                                <p class="col-3 my-auto">P VS :</p>
+                                <input type="text" class="form-control col" id="inputR2P1" placeholder="Nama Musuh P2">
+                            </div>
+                        </div>
+                        <!-- Round I-3 -->
+                        <div class="border p-2 match-box ">
+                            <div class=" fw-bold my-auto text-center text-primary  ">Round
+                                I-3 (P3)</div>
+                            <div class="row px-2">
+                                <p class="col-3 my-auto">P VS :</p>
+                                <input type="text" class="form-control col" id="inputR3P1" placeholder="Nama Musuh">
+                            </div>
+                        </div>
+                        <!-- Round I-4 -->
+                        <div class="border p-2 match-box ">
+                            <div class=" fw-bold my-auto text-center text-primary">Round
+                                I-4</div>
+                            <div class="row px-2">
+                                <p class="col-3 my-auto">P VS :</p>
+                                <p class="col fw-bold my-auto" id="hasilR3P2"></p>
+                            </div>
+                        </div>
+                        <!-- Round II-1 -->
+                        <div class="border p-2 match-box ">
+                            <div class=" fw-bold my-auto text-center text-primary">Round
+                                II-1</div>
+                            <div class="row px-2">
+                                <p class="col-3 my-auto">P VS :</p>
+                                <input type="text" class="form-control col" id="inputR5P1" placeholder="Nama Musuh">
+                            </div>
+                        </div>
+                        <!-- Round II-2 -->
+                        <div class="border p-2 match-box ">
+                            <div class=" fw-bold my-auto text-center text-primary">Round
+                                II-2</div>
+                            <div class="row px-2">
+                                <p class="col-3 my-auto">P VS :</p>
+                                <p class="col fw-bold my-auto" id="hasilR5P2"></p>
+                            </div>
+                            <div class="row px-2">
+                                <p class="col-5 my-auto "><span id="hasilR3P22"></span> VS</p>
+                                <input type="text" class="form-control col mt-1" id="inputR6P1"
+                                    placeholder="Nama Musuh">
+                            </div>
+                        </div>
+                        <!-- Round II-4 -->
+                        <div class="border p-2 match-box ">
+                            <div class=" fw-bold my-auto text-center text-primary">Round
+                                II-4</div>
+                            <div class="row px-2">
+                                <p class="col-3 my-auto">P VS :</p>
+                                <p class="col fw-bold my-auto" id="hasilR6P1"></p>
+                            </div>
+                        </div>
+                        <!-- Round III-5 -->
+                        <div class="border p-2 match-box ">
+                            <div class=" fw-bold my-auto text-center text-primary">Round
+                                II-5</div>
+                            <div class="row px-2">
+                                <p class="col-3 my-auto">P VS :</p>
+                                <p class="col fw-bold my-auto" id="hasilR6P2"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MUSUH  -->
+                    <div class="col d-flex flex-column">
+                        <h2 class=" text-center" id="hasilR2P1">(musuh pertamamu)</h2>
+                        <!-- Round I-2 -->
+                        <div class="flex-fill border">
+                            <div class=" fw-bold my-auto text-center text-primary">Round
+                                I-2</div>
+                            <div class="row px-2">
+                                <p class="col-3 my-auto">P VS :</p>
+                                <p class="col my-auto">Kamu</p>
+                            </div>
+                        </div>
+                        <!-- Round I-3 -->
+                        <div class="flex-fill border">
+                            <div class=" fw-bold my-auto text-center text-primary">Round
+                                I-3 (P3)</div>
+                            <div class="row px-2">
+                                <p class="col-3 my-auto">P VS :</p>
+                                <input type="text" class="form-control col" id="inputR3P2" placeholder="Nama Musuh">
+                            </div>
+                        </div>
+                        <!-- Round I-4 -->
+                        <div class="flex-fill border">
+                            <div class=" fw-bold my-auto text-center text-primary">Round
+                                I-4</div>
+                            <div class="row px-2">
+                                <p class="col-3 my-auto">P VS :</p>
+                                <p class="col my-auto" id="hasilR3P1"></p>
+                            </div>
+                        </div>
+                        <!-- Round II-1 -->
+                        <div class="flex-fill border">
+                            <div class=" fw-bold my-auto text-center text-primary">Round
+                                II-1</div>
+                            <div class="row px-2">
+                                <p class="col-3 my-auto">P VS :</p>
+                                <input type="text" class="form-control col" id="inputR5P2" placeholder="Nama Musuh">
+                            </div>
+                        </div>
+                        <!-- Round II-2 -->
+                        <div class="flex-fill border">
+                            <div class=" fw-bold my-auto text-center text-primary">Round
+                                II-2</div>
+                            <div class="row px-2">
+                                <p class="col-3 my-auto">P VS :</p>
+                                <p class="col my-auto" id="hasilR5P1"></p>
+                            </div>
+                        </div>
+                        <!-- Round II-4 -->
+                        <div class="flex-fill border">
+                            <div class=" fw-bold my-auto text-center text-primary">Round
+                                II-4</div>
+                            <div class="row px-2">
+                                <p class="col-3 my-auto">P VS :</p>
+                                <input type="text" class="form-control col mt-1" id="inputR6P2"
+                                    placeholder="Nama Musuh">
+                            </div>
+                        </div>
+                        <!-- Round III-5 -->
+                        <div class="flex-fill border">
+                            <div class=" fw-bold my-auto text-center text-primary">Round
+                                II-5</div>
+                            <div class="row px-2">
+                                <p class="col-3 my-auto">P VS :</p>
+                                <p class="col my-auto" id="hasil3">P8 player yang tersisa</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer class="p-5">
+
+    </footer>
+    <script>
+
+        let hasilR2P1 = document.querySelector('#hasilR2P1');
+        let inputR2P1 = document.querySelector("#inputR2P1");
+        inputR2P1.addEventListener('input', (e) => {
+            e.preventDefault();
+            hasilR2P1.textContent = e.target.value
+        })
+
+        let hasilR3P1 = document.querySelector('#hasilR3P1');
+        let inputR3P1 = document.querySelector("#inputR3P1");
+        inputR3P1.addEventListener('input', (e) => {
+            e.preventDefault();
+            hasilR3P1.textContent = e.target.value
+        })
+
+        let hasilR3P2 = document.querySelector('#hasilR3P2');
+        let hasilR3P22 = document.querySelector('#hasilR3P22');
+        let inputR3P2 = document.querySelector("#inputR3P2");
+        inputR3P2.addEventListener('input', (e) => {
+            e.preventDefault();
+            hasilR3P2.textContent = e.target.value
+            hasilR3P22.textContent = e.target.value
+        })
+
+        let hasilR5P1 = document.querySelector('#hasilR5P1');
+        let inputR5P1 = document.querySelector("#inputR5P1");
+        inputR5P1.addEventListener('input', (e) => {
+            e.preventDefault();
+            hasilR5P1.textContent = e.target.value
+        })
+
+        let hasilR5P2 = document.querySelector('#hasilR5P2');
+        let inputR5P2 = document.querySelector("#inputR5P2");
+        inputR5P2.addEventListener('input', (e) => {
+            e.preventDefault();
+            hasilR5P2.textContent = e.target.value
+        })
+
+        let hasilR6P1 = document.querySelector('#hasilR6P1');
+        let inputR6P1 = document.querySelector("#inputR6P1");
+        inputR6P1.addEventListener('input', (e) => {
+            e.preventDefault();
+            hasilR6P1.textContent = e.target.value
+        })
+        let hasilR6P2 = document.querySelector('#hasilR6P2');
+        let inputR6P2 = document.querySelector("#inputR6P2");
+        inputR6P2.addEventListener('input', (e) => {
+            e.preventDefault();
+            hasilR6P2.textContent = e.target.value
+        })
+
+
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    </div>
+</body>
+
+</html>
