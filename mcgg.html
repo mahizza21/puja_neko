@@ -10,10 +10,13 @@
 </head>
 <style>
     .match-box {
-        flex: 1; /* semua kotak di dalam kol sama tinggi */
-        min-height: 100px; /* tinggi minimum tiap baris */
+        flex: 1;
+        /* semua kotak di dalam kol sama tinggi */
+        min-height: 100px;
+        /* tinggi minimum tiap baris */
     }
 </style>
+
 <body>
     <nav class="navbar bg-primary navbar-expand-lg" data-bs-theme="dark">
         <div class="container-fluid">
@@ -48,155 +51,152 @@
 
     <div class="container">
         <h1 class="font-bold text-center">TEBAK MUSUH BERIKUTNYA</h1>
-
-        <div class="container">
-            <form action="">
-                <div class="row" style="height: 700px;">
-                    <div class="col d-flex flex-column">
-                        <h2 class=" text-center">Kamu</h2>
-                        <!-- Round I-2 -->
-                        <div class="border p-2 match-box ">
-                            <div class=" fw-bold my-auto text-center text-primary ">Round
-                                I-2</div>
-                            <div class="row px-2">
-                                <p class="col-3 my-auto">P VS :</p>
-                                <input type="text" class="form-control col" id="inputR2P1" placeholder="Nama Musuh P2">
-                            </div>
-                        </div>
-                        <!-- Round I-3 -->
-                        <div class="border p-2 match-box ">
-                            <div class=" fw-bold my-auto text-center text-primary  ">Round
-                                I-3 (P3)</div>
-                            <div class="row px-2">
-                                <p class="col-3 my-auto">P VS :</p>
-                                <input type="text" class="form-control col" id="inputR3P1" placeholder="Nama Musuh">
-                            </div>
-                        </div>
-                        <!-- Round I-4 -->
-                        <div class="border p-2 match-box ">
-                            <div class=" fw-bold my-auto text-center text-primary">Round
-                                I-4</div>
-                            <div class="row px-2">
-                                <p class="col-3 my-auto">P VS :</p>
-                                <p class="col fw-bold my-auto" id="hasilR3P2"></p>
-                            </div>
-                        </div>
-                        <!-- Round II-1 -->
-                        <div class="border p-2 match-box ">
-                            <div class=" fw-bold my-auto text-center text-primary">Round
-                                II-1</div>
-                            <div class="row px-2">
-                                <p class="col-3 my-auto">P VS :</p>
-                                <input type="text" class="form-control col" id="inputR5P1" placeholder="Nama Musuh">
-                            </div>
-                        </div>
-                        <!-- Round II-2 -->
-                        <div class="border p-2 match-box ">
-                            <div class=" fw-bold my-auto text-center text-primary">Round
-                                II-2</div>
-                            <div class="row px-2">
-                                <p class="col-3 my-auto">P VS :</p>
-                                <p class="col fw-bold my-auto" id="hasilR5P2"></p>
-                            </div>
-                            <div class="row px-2">
-                                <p class="col-5 my-auto "><span id="hasilR3P22"></span> VS</p>
-                                <input type="text" class="form-control col mt-1" id="inputR6P1"
-                                    placeholder="Nama Musuh">
-                            </div>
-                        </div>
-                        <!-- Round II-4 -->
-                        <div class="border p-2 match-box ">
-                            <div class=" fw-bold my-auto text-center text-primary">Round
-                                II-4</div>
-                            <div class="row px-2">
-                                <p class="col-3 my-auto">P VS :</p>
-                                <p class="col fw-bold my-auto" id="hasilR6P1"></p>
-                            </div>
-                        </div>
-                        <!-- Round III-5 -->
-                        <div class="border p-2 match-box ">
-                            <div class=" fw-bold my-auto text-center text-primary">Round
-                                II-5</div>
-                            <div class="row px-2">
-                                <p class="col-3 my-auto">P VS :</p>
-                                <p class="col fw-bold my-auto" id="hasilR6P2"></p>
-                            </div>
+        <form action="">
+            <div class="row" style="height: 700px;">
+                <div class="col d-flex flex-column">
+                    <h2 class=" text-center">Kamu</h2>
+                    <!-- Round I-2 -->
+                    <div class="border p-2 match-box ">
+                        <div class=" fw-bold my-auto text-center text-primary ">Round
+                            I-2</div>
+                        <div class="row px-2">
+                            <p class="col-3 my-auto">P VS :</p>
+                            <input type="text" class="form-control col" id="inputR2P1" placeholder="Nama Musuh P2">
                         </div>
                     </div>
-
-                    <!-- MUSUH  -->
-                    <div class="col d-flex flex-column">
-                        <h2 class=" text-center" id="hasilR2P1">(musuh pertamamu)</h2>
-                        <!-- Round I-2 -->
-                        <div class="flex-fill border">
-                            <div class=" fw-bold my-auto text-center text-primary">Round
-                                I-2</div>
-                            <div class="row px-2">
-                                <p class="col-3 my-auto">P VS :</p>
-                                <p class="col my-auto">Kamu</p>
-                            </div>
+                    <!-- Round I-3 -->
+                    <div class="border p-2 match-box ">
+                        <div class=" fw-bold my-auto text-center text-primary  ">Round
+                            I-3 (P3)</div>
+                        <div class="row px-2">
+                            <p class="col-3 my-auto">P VS :</p>
+                            <input type="text" class="form-control col" id="inputR3P1" placeholder="Nama Musuh">
                         </div>
-                        <!-- Round I-3 -->
-                        <div class="flex-fill border">
-                            <div class=" fw-bold my-auto text-center text-primary">Round
-                                I-3 (P3)</div>
-                            <div class="row px-2">
-                                <p class="col-3 my-auto">P VS :</p>
-                                <input type="text" class="form-control col" id="inputR3P2" placeholder="Nama Musuh">
-                            </div>
+                    </div>
+                    <!-- Round I-4 -->
+                    <div class="border p-2 match-box ">
+                        <div class=" fw-bold my-auto text-center text-primary">Round
+                            I-4</div>
+                        <div class="row px-2">
+                            <p class="col-3 my-auto">P VS :</p>
+                            <p class="col fw-bold my-auto" id="hasilR3P2"></p>
                         </div>
-                        <!-- Round I-4 -->
-                        <div class="flex-fill border">
-                            <div class=" fw-bold my-auto text-center text-primary">Round
-                                I-4</div>
-                            <div class="row px-2">
-                                <p class="col-3 my-auto">P VS :</p>
-                                <p class="col my-auto" id="hasilR3P1"></p>
-                            </div>
+                    </div>
+                    <!-- Round II-1 -->
+                    <div class="border p-2 match-box ">
+                        <div class=" fw-bold my-auto text-center text-primary">Round II-1 (Opsional)</div>
+                        <div class="row px-2">
+                            <p class="col-3 my-auto">P VS :</p>
+                            <input type="text" class="form-control col" id="inputR5P1" placeholder="Nama Musuh">
                         </div>
-                        <!-- Round II-1 -->
-                        <div class="flex-fill border">
-                            <div class=" fw-bold my-auto text-center text-primary">Round
-                                II-1</div>
-                            <div class="row px-2">
-                                <p class="col-3 my-auto">P VS :</p>
-                                <input type="text" class="form-control col" id="inputR5P2" placeholder="Nama Musuh">
-                            </div>
+                    </div>
+                    <!-- Round II-2 -->
+                    <div class="border p-2 match-box ">
+                        <div class=" fw-bold my-auto text-center text-primary">Round II-2 </div>
+                        <div class="row px-2">
+                            <p class="col-3 my-auto">P VS :</p>
+                            <p class="col fw-bold my-auto" id="hasilR5P2"></p>
                         </div>
-                        <!-- Round II-2 -->
-                        <div class="flex-fill border">
-                            <div class=" fw-bold my-auto text-center text-primary">Round
-                                II-2</div>
-                            <div class="row px-2">
-                                <p class="col-3 my-auto">P VS :</p>
-                                <p class="col my-auto" id="hasilR5P1"></p>
-                            </div>
+                        <div class="row px-2">
+                            <p class="col-5 my-auto "><span id="hasilR3P22"></span> VS</p>
+                            <input type="text" class="form-control col mt-1" id="inputR6P1" placeholder="Nama Musuh">
                         </div>
-                        <!-- Round II-4 -->
-                        <div class="flex-fill border">
-                            <div class=" fw-bold my-auto text-center text-primary">Round
-                                II-4</div>
-                            <div class="row px-2">
-                                <p class="col-3 my-auto">P VS :</p>
-                                <input type="text" class="form-control col mt-1" id="inputR6P2"
-                                    placeholder="Nama Musuh">
-                            </div>
+                    </div>
+                    <!-- Round II-4 -->
+                    <div class="border p-2 match-box ">
+                        <div class=" fw-bold my-auto text-center text-primary">Round
+                            II-4</div>
+                        <div class="row px-2">
+                            <p class="col-3 my-auto">P VS :</p>
+                            <p class="col fw-bold my-auto" id="hasilR6P1"></p>
                         </div>
-                        <!-- Round III-5 -->
-                        <div class="flex-fill border">
-                            <div class=" fw-bold my-auto text-center text-primary">Round
-                                II-5</div>
-                            <div class="row px-2">
-                                <p class="col-3 my-auto">P VS :</p>
-                                <p class="col my-auto" id="hasil3">P8 player yang tersisa</p>
-                            </div>
+                    </div>
+                    <!-- Round III-5 -->
+                    <div class="border p-2 match-box ">
+                        <div class=" fw-bold my-auto text-center text-primary">Round
+                            II-5</div>
+                        <div class="row px-2">
+                            <p class="col-3 my-auto">P VS :</p>
+                            <p class="col fw-bold my-auto" id="hasilR6P2"></p>
                         </div>
                     </div>
                 </div>
-            </form>
-        </div>
+
+                <!-- MUSUH  -->
+                <div class="col d-flex flex-column">
+                    <h2 class=" text-center" id="hasilR2P1">(musuh pertamamu)</h2>
+                    <!-- Round I-2 -->
+                    <div class="flex-fill border">
+                        <div class=" fw-bold my-auto text-center text-primary">Round
+                            I-2</div>
+                        <div class="row px-2">
+                            <p class="col-3 my-auto">P VS :</p>
+                            <p class="col my-auto">Kamu</p>
+                        </div>
+                    </div>
+                    <!-- Round I-3 -->
+                    <div class="flex-fill border">
+                        <div class=" fw-bold my-auto text-center text-primary">Round
+                            I-3 (P3)</div>
+                        <div class="row px-2">
+                            <p class="col-3 my-auto">P VS :</p>
+                            <input type="text" class="form-control col" id="inputR3P2" placeholder="Nama Musuh">
+                        </div>
+                    </div>
+                    <!-- Round I-4 -->
+                    <div class="flex-fill border">
+                        <div class=" fw-bold my-auto text-center text-primary">Round
+                            I-4</div>
+                        <div class="row px-2">
+                            <p class="col-3 my-auto">P VS :</p>
+                            <p class="col my-auto" id="hasilR3P1"></p>
+                        </div>
+                    </div>
+                    <!-- Round II-1 -->
+                    <div class="flex-fill border">
+                        <div class=" fw-bold my-auto text-center text-primary">Round
+                            II-1</div>
+                        <div class="row px-2">
+                            <p class="col-3 my-auto">P VS :</p>
+                            <input type="text" class="form-control col" id="inputR5P2" placeholder="Nama Musuh">
+                        </div>
+                    </div>
+                    <!-- Round II-2 -->
+                    <div class="flex-fill border">
+                        <div class=" fw-bold my-auto text-center text-primary">Round
+                            II-2</div>
+                        <div class="row px-2">
+                            <p class="col-3 my-auto">P VS :</p>
+                            <p class="col my-auto" id="hasilR5P1"></p>
+                        </div>
+                    </div>
+                    <!-- Round II-4 -->
+                    <div class="flex-fill border">
+                        <div class=" fw-bold my-auto text-center text-primary">Round
+                            II-4</div>
+                        <div class="row px-2">
+                            <p class="col-3 my-auto">P VS :</p>
+                            <input type="text" class="form-control col mt-1" id="inputR6P2" placeholder="Nama Musuh">
+                        </div>
+                    </div>
+                    <!-- Round III-5 -->
+                    <div class="flex-fill border">
+                        <div class=" fw-bold my-auto text-center text-primary">Round
+                            II-5</div>
+                        <div class="row px-2">
+                            <p class="col-3 my-auto">P VS :</p>
+                            <p class="col my-auto" id="hasil3">P8 player yang tersisa</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
     </div>
+
     <footer class="p-5">
+        <div class="container">
+            <p class="p-2">note: untuk Opsional bisa tidak diisi karna sudah gk bisa ditebak lagi (useless). </p>
+        </div>
 
     </footer>
     <script>
